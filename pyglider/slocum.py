@@ -4,11 +4,7 @@ Routines to convert raw slocum dinkum files to netcdf timeseries.
 """
 import bitstring
 from datetime import datetime
-try:
-    import dbdreader
-    have_dbdreader = True
-except ImportError:
-    have_dbdreader = True
+import dbdreader
 import glob
 import logging
 import numpy as np
@@ -20,7 +16,7 @@ import yaml
 
 import pyglider.utils as utils
 
-
+have_dbdreader = True
 _log = logging.getLogger(__name__)
 
 
